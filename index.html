@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Movie Task-1</title>
+</head>
+
+<body>
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-6">
+                <a href="index.html" class="logo">
+                    <img src="./assets/images/netflixlogo.svg" alt="logo" title="logo">
+                </a>
+            </div>
+            <div class="col-6 text-right align-self-center">
+                <button class="btn btn-sm net-pri-btn" id="addmovie">Add Movie</button>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row" id="movieContainer">
+            <!-- <div class="col-md-3 mt-3">
+                <div class="card movieCard">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-10">
+                                <h4>
+                                </h4>
+                            </div>
+                            <div class="col-2">
+                                <span class=" text-center p-2 badge badge-success">5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <figure>
+                            <img src="./assets/images/Sairat_img.jpg" alt="sairat">
+                            <figcaption>
+                                <p>
+                                    
+                                </p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between">
+                        <button type="button" class="btn btn-sm net-sec-btn">Edit</button>
+                        <button type="button" class="btn btn-sm net-pri-btn">Remove</button>
+                    </div>
+                </div>
+            </div>   -->
+        </div>
+    </div>
+    <div class="movieModel" id="movieModel">
+        <form id="movieForm">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between">
+                    <h3>Add Movie</h3>
+                    <i class="fa-solid fa-xmark fa-2x closeMovieModel" id="closeMark" role="button"></i>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="movieName">Movie Name</label>
+                        <input type="text" class="form-control" id="movieName">
+                    </div>
+                    <div class="form-group">
+                        <label for="movieImage">Movie Image</label>
+                        <input type="text" class="form-control" id="movieImage">
+                    </div>
+                    <div class="form-group">
+                        <label for="movieDesciption">Movie Desciption</label>
+                        <textarea name="movieDesciption" id="movieDesciption" row="3" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="movieRating">Rating</label>
+                        <select name="rating" id="movieRating" class="form-control">
+                            <option value="">Select Rating</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <button type="submit" class="btn btn-sm net-sec-btn" id="addMoviebtn">Add Movie</button>
+                    <button type="button" class="btn btn-sm net-sec-btn d-none" id="updateMoviebtn">Update</button>
+                    <button type="button" class="btn btn-sm net-pri-btn closeMovieModel" id="closeBtn">Close</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <div class="backdrop closeMovieModel" id="backdrop">
+    </div>
+    <div class="spinner d-none" id="spinner">
+        <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
